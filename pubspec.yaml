@@ -25,9 +25,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
-  http: any
+  dio: any
   flutter_riverpod: any
   freezed_annotation: any
+  go_router: any
   
 dev_dependencies:
   flutter_test:
