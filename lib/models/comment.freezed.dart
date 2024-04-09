@@ -137,13 +137,14 @@ class __$$CommentImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CommentImpl implements _Comment {
+class _$CommentImpl extends _Comment {
   const _$CommentImpl(
       {required this.postId,
       required this.id,
       required this.name,
       required this.email,
-      required this.body});
+      required this.body})
+      : super._();
 
   factory _$CommentImpl.fromJson(Map<String, dynamic> json) =>
       _$$CommentImplFromJson(json);
@@ -194,13 +195,14 @@ class _$CommentImpl implements _Comment {
   }
 }
 
-abstract class _Comment implements Comment {
+abstract class _Comment extends Comment {
   const factory _Comment(
       {required final int postId,
       required final int id,
       required final String name,
       required final String email,
       required final String body}) = _$CommentImpl;
+  const _Comment._() : super._();
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$CommentImpl.fromJson;
 
