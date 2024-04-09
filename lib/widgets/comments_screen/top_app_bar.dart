@@ -109,7 +109,7 @@ class _TopAppBarState extends State<TopAppBar> {
                       duration: const Duration(milliseconds: 600),
                       child: !isShowingOptions 
                           ? Container(
-                            constraints:  BoxConstraints(maxHeight: AppSizes.topAppBarHeight - 20, maxWidth: 22.w),
+                            constraints:  BoxConstraints(maxHeight: AppSizes.topAppBarHeight - 40, maxWidth: 22.w),
                             alignment: Alignment.centerRight,
                             padding: const EdgeInsets.only(right: 8.0),
                             margin: const EdgeInsets.all(2.0),

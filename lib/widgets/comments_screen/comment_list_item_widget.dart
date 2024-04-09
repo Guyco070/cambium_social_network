@@ -50,11 +50,11 @@ class CommentListItemWidget extends StatelessWidget {
                     const Spacer(),
                     if(comment.id == -1)
                       Shimmer.fromColors(
-                      enabled: !isExpanded && index == 0, // for a new comment
+                      enabled: index == 0, // for a new comment
                       baseColor: Colors.white.withOpacity(0.8),
                       highlightColor: Colors.black,
                       period: const Duration(seconds: 4),
-                      child: _buildSmallTextWidget("Created by you")
+                      child: _buildSmallTextWidget("You are the creator")
                     ),
                   ],
                 ),
