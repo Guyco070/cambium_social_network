@@ -11,30 +11,39 @@ void showCustomDialog(BuildContext context) {
     pageBuilder: (_, __, ___) {
       return Center(
         child: Container(
-          height: 10.h,
+          height: 15.h,
+          width: 90.w,
           alignment: Alignment.center,
           margin: const EdgeInsets.symmetric(horizontal: 20),
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(40)),
           child: Material(
             borderRadius: BorderRadius.circular(15),
-            child: const Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-                children: [
-                  TextSpan(
-                    text: "Note: ",
+            color: Colors.white,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                  const Text(
+                    "Note: ",
                     style: TextStyle(
+                      fontSize: 15,
                       fontWeight: FontWeight.bold
                     ),
                   ),
-                  TextSpan(
-                    text: "You can click on a comment to expand and see all the information"
-                  ),
-                ]
-              ),
+                  SizedBox(
+                    width: 60.w,
+                    height: 15.h,
+                    child: const Text(
+                      "You can click on a comment to expand and see all the information.",
+                      maxLines: 100,
+                      style: TextStyle(
+                        fontSize: 15,
+                      ),
+                    ),
+                  )
+              ],
             ),
           ),
         ),
@@ -43,9 +52,9 @@ void showCustomDialog(BuildContext context) {
     transitionBuilder: (_, anim, __, child) {
       Tween<Offset> tween;
       if (anim.status == AnimationStatus.reverse) {
-        tween = Tween(begin: Offset(-1, 0), end: Offset.zero);
+        tween = Tween(begin: const Offset(-1, 0), end: Offset.zero);
       } else {
-        tween = Tween(begin: Offset(1, 0), end: Offset.zero);
+        tween = Tween(begin: const Offset(1, 0), end: Offset.zero);
       }
   
       return SlideTransition(

@@ -1,5 +1,5 @@
 import 'package:cambium_social_network/screens/info_screen.dart';
-import 'package:cambium_social_network/widgets/comments_screen/hello_dialog.dart';
+import 'package:cambium_social_network/widgets/comments_screen/note_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
